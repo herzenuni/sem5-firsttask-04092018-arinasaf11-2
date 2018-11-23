@@ -1,13 +1,18 @@
 #мои исключения
 class RangeException(Exception):
-  pass
+  def __init__(self,text):
+    self.text=text
+
+  def __str__(self):
+    return "RangeException:" + self.text
+
 
 try:
   number = int(input('Введите число от 0 до 9 - '))
   if ((number<0) | (number>9)):
     raise RangeException('Введенное число не входит в указанный интервал')
-except RangeException:
-  print('Введенное число не входит в заданный интервал,попробуйте еще раз')
+except RangeException as ex:
+  print(str(ex))
   number = int(input('Введите число от 0 до 9 - '))
 except ValueError:
   print('Введенный символ не является числом,попробуйте еще раз')
