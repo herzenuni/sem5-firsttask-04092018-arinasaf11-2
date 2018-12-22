@@ -27,4 +27,4 @@
 ```python
 with open (".\history_of_func.txt",'a') as history:
       history.write(str(func(number, typ))+"\n")
-```      `
+```
