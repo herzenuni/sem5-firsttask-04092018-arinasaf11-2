@@ -1,11 +1,10 @@
-#мои исключения
+#Собственное исключение
 class RangeException(Exception):
   def __init__(self,text):
     self.text=text
 
   def __str__(self):
-    return "RangeException:" + self.text
-
+    return "RangeException: " + self.text
 
 try:
   number = int(input('Введите число от 0 до 9 - '))
@@ -17,7 +16,7 @@ except RangeException as ex:
 except ValueError:
   print('Введенный символ не является числом,попробуйте еще раз')
   number = int(input('Введите число от 0 до 9 - '))
-answer = input('Напишите ="да", если хотите перевести это число в какую-либо систему счисления, или "нет", если хотите увидеть лишь название введенной вами цифры - ')
+answer = input('Напишите ="да", если хотите перевести это число в какую-либо систему счисления, или "нет", если хотите увидеть только название введенной вами цифры - ')
 if (answer == 'да'):
   typ = input('"bin"-бинарная система\n"oct"-восьмеричная система\n"hex"-шестнадцатиричная система\n')
 else:
@@ -28,7 +27,6 @@ else:
 Функция выводит название введенной цифры от 0 до 9 или,если указан второй аргумент, преобразует ее в бинарную, восьмеричную или шестнадцатиричную систему счисления и выводит значение
 """
 def func(x, y):
-  if (y == ''):
     if (x == 0):
       string = 'ноль'
     elif (x == 1):
@@ -49,22 +47,18 @@ def func(x, y):
       string = 'восемь'
     elif (x == 9):
       string = 'девять'
-    #else:
-   # print('Введенное число не входит в диапазон от 0 до 9,попробуйте еще раз')
-  else:
     if (y == 'bin'):
-      string = str(bin(x))
+      string += ": "+str(bin(x))
     elif (y == 'oct'):
-      string = str(oct(x))
+      string += ": "+str(oct(x))
     elif y == 'hex':
-      string = str(hex(x))
+      string += ": "+str(hex(x))
+    print(string)
+    return string
 
-  print(string)
-  return string
 
 with open (".\history_of_func.txt",'a') as history:
     history.write(str(func(number, typ))+"\n")
-
 
 #assert func(0,'') == 'ноль', 'Название цифры не верно'
 #assert func(1,'oct') == '0o1', 'Название или перевод цифры не верен'
