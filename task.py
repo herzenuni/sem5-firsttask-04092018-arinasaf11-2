@@ -62,7 +62,9 @@ def func(x, y):
   print(string)
   return string
 
-func(number, typ)
+with open (".\history_of_func.txt",'a') as history:
+    history.write(str(func(number, typ))+"\n")
+
 
 #assert func(0,'') == 'ноль', 'Название цифры не верно'
 #assert func(1,'oct') == '0o1', 'Название или перевод цифры не верен'
