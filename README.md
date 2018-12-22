@@ -28,3 +28,4 @@
 with open (".\history_of_func.txt",'a') as history:
       history.write(str(func(number, typ))+"\n")
 ```
+![Запись в файл](https://github.com/herzenuni/sem5-firsttask-04092018-arinasaf11-2/blob/master/history_of_func.jpg?raw=true)
