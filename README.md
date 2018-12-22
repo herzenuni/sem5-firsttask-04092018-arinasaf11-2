@@ -24,6 +24,7 @@
 
 При записи в файл предусмотреть вероятность возникновения исключительных ситуаций и создать собственный класс или классы для обработки исключительных ситуаций при записи в файл. 
 
-`with open (".\history_of_func.txt",'a') as history:
+```python
+with open (".\history_of_func.txt",'a') as history:
       history.write(str(func(number, typ))+"\n")
-      `
+```      `
