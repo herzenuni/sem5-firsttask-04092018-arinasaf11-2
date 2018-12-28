@@ -5,6 +5,7 @@
 Предусмотрите обработку исключительных ситуаций. 
 Напишите тесты с использованием assert.
 
+```python
 #Собственное исключение
 class RangeException(Exception):
   def __init__(self,text):
@@ -70,6 +71,7 @@ with open (".\history_of_func.txt",'a') as history:
 #assert func(0,'') == 'ноль', 'Название цифры не верно'
 #assert func(1,'oct') == '0o1', 'Название или перевод цифры не верен'
 #assert func(3,'hex') == '0x3', 'Название или перевод цифры не верен'
+```
 
 ![скриншот 1](https://github.com/herzenuni/sem5-firsttask-04092018-arinasaf11-2/blob/master/Screenshot_1.jpg?raw=true)
 
